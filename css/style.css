@@ -13,23 +13,60 @@ body {
   position: relative;
 }
 
-body > div {
+body > img {
   position: absolute;
 }
 
-.terreno {
-  bottom: 20%;
-  background-color: red;
-  width: 8%;
-  height: 20%;
+#sipariotop {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: calc(100vw * 9 / 16 * 0.17);
 }
 
-#uomo1 {
+#sipariosx {
+  position: fixed;
+  left: 0;
+  top: 5vw;
+  height: calc(91vw * 9 / 16);
+  width: 10%;
+
+}
+#sipariodx {
+  position: fixed;
+  right: 0;
+  top: 5vw;
+  height: calc(91vw * 9 / 16);
+  width: 10%;
+
+}
+
+
+.air {
+  top: 22%;
+}
+.ground {
+  bottom: 20%;
+}
+
+#air1 {
+  left: 25%;
+  width: 25%;
+}
+#air2 {
+  left: 55%;
+  width: 25%;
+}
+#gunman1 {
   left: 10%;
+  width: 18%;
 }
-#uomo2 {
-  left: 46%;
+#gunman2 {
+  left: 42%;
+  width: 20%;
 }
-#uomo3 {
-  left: 82%;
+#gunman3 {
+  left: 75%;
+  width: 14%;
 }
