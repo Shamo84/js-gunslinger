@@ -43,13 +43,15 @@ body > img {
 }
 
 
-.air {
+.aircraft {
   top: 22%;
+}
+.bird {
+  bottom: 49%;
 }
 .ground {
   bottom: 20%;
 }
-
 #air1 {
   left: 25%;
   width: 25%;
@@ -58,15 +60,27 @@ body > img {
   left: 55%;
   width: 25%;
 }
+#eagle {
+  left: 10%;
+  width: 23%;
+}
+#black-eagle {
+  left: 42%;
+  width: 23%;
+}
+#owl {
+  left: 73%;
+  width: 17%;
+}
 #gunman1 {
   left: 10%;
-  width: 18%;
+  width: 19%;
 }
 #gunman2 {
   left: 42%;
-  width: 20%;
+  width: 18%;
 }
 #gunman3 {
   left: 75%;
-  width: 14%;
+  width: 12%;
 }
