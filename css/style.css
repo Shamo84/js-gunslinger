@@ -32,7 +32,7 @@ body > div {
   position: fixed;
   top: 0;
   width: 100%;
-  height: calc(100vw * 9 / 16 * 0.17);
+  height: calc(100vw * 9 / 16 * 0.13);
 }
 
 #sipariosx {
@@ -97,13 +97,13 @@ body > div {
   background-position: center;
 }
 .aircraft {
-  top: 28%;
+  top: 25%;
 }
 .bird {
-  top: 45%;
+  top: 48%;
 }
 .ground {
-  top: 73%;
+  top: 76%;
 }
 #helicopter {
   background-image: url(../img/helicopter.png);
