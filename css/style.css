@@ -30,6 +30,7 @@ h1 {
   z-index: 0;
 }
 .mirino-insanguinato,
+.mirino-esplosivo,
 .mirino {
   top: 50%;
   left: 50%;
@@ -39,8 +40,14 @@ h1 {
   z-index: -1;
   opacity: 0;
 }
+.sparizione-mirino {
+  opacity: 0;
+  transition: opacity 0.8s;
+}
 .bang {
   opacity: 1;
+  transition: opacity 0s;
+
 }
 
 h1 {
@@ -266,36 +273,45 @@ h1 {
 .bersaglio-colpito-1 {
   background-image: url(../img/helicopterx.png);
   transition: 1s;
+  z-index: -2;
 }
 .bersaglio-colpito-2 {
   background-image: url(../img/jet2x.png);
   transition: 1s;
+  z-index: -2;
 }
 .bersaglio-colpito-3 {
   background-image: url(../img/air-balloonx.png);
   transition: 1s;
+  z-index: -2;
 }
 .bersaglio-colpito-4 {
   background-image: url(../img/eaglex.png);
   transition: 1s;
+  z-index: -2;
 }
 .bersaglio-colpito-5 {
   background-image: url(../img/dragonx.png);
   transition: 1s;
+  z-index: -2;
 }
 .bersaglio-colpito-6 {
   background-image: url(../img/owlx.png);
   transition: 1s;
+  z-index: -2;
 }
 .bersaglio-colpito-7 {
   background-image: url(../img/gunman1x.png);
   transition: 1s;
+  z-index: -2;
 }
 .bersaglio-colpito-8 {
   background-image: url(../img/gunman2x.png);
   transition: 1s;
+  z-index: -2;
 }
 .bersaglio-colpito-9 {
   background-image: url(../img/gunman3x.png);
   transition: 1s;
+  z-index: -2;
 }
