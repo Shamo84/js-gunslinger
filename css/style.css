@@ -12,6 +12,7 @@ body {
   background-size: 100vw calc(100vw * 9 / 16);
   overflow: hidden;
   position: relative;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .crosshair {
@@ -19,10 +20,33 @@ body {
 }
 
 body > img,
-body > div {
+body > div,
+h1 {
   position: absolute;
 }
 
+.overlay {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50vw;
+  height: 50vw;
+  z-index: -1;
+  opacity: 0;
+}
+.bang {
+  /* z-index: 1; */
+  opacity: 1;
+}
+h1 {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 6vw;
+  color: white;
+  text-shadow: .2vw .2vw black;
+  transition: 1s;
+}
 #gioca {
   background-color: red;
   left: 50%;
@@ -42,8 +66,8 @@ body > div {
 #sipariosx {
   position: fixed;
   left: 0;
-  top: 5vw;
-  height: calc(91vw * 9 / 16);
+  top: 4vw;
+  height: calc(93vw * 9 / 16);
   width: 50%;
   z-index: 2;
 
@@ -51,8 +75,8 @@ body > div {
 #sipariodx {
   position: fixed;
   right: 0;
-  top: 5vw;
-  height: calc(91vw * 9 / 16);
+  top: 4vw;
+  height: calc(93vw * 9 / 16);
   width: 50%;
   z-index: 2;
 }
@@ -229,6 +253,7 @@ body > div {
   opacity: 0;
   transition: opacity 0.5s;
 }
+
 .bersaglio-colpito-1 {
   background-image: url(../img/helicopterx.png);
   transition: 1s;
