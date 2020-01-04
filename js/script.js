@@ -4,6 +4,7 @@ var random3 = 1;
 
 document.getElementById('gioca').addEventListener('click',
 function() {
+  document.getElementById('gioca').classList.add('hidden');
   document.getElementById('sipariodx').classList.add('sipario-dx');
   document.getElementById('sipariosx').classList.add('sipario-sx');
   document.getElementById('bersaglio1').classList.add('animazione-sx');
@@ -31,9 +32,12 @@ function() {
   document.getElementById('bersaglio' + random).classList.remove('bersaglio-colpito-' + random)
       document.getElementById('bersaglio' + random).classList.add('rotate')
       document.getElementById('bersaglio' + random).classList.remove('transparent')
+      document.getElementById('bersaglio' + random).classList.remove('hidden')
     }, 5000 + (i * 2000));
     setTimeout(function(){
       document.getElementById('bersaglio' + random).classList.add('transparent')
+      document.getElementById('bersaglio' + random).classList.add('hidden')
+
     }, 5000 + 1000 + (i * 2000));
     setTimeout(function(){
       document.getElementById('bersaglio' + random).classList.remove('rotate')
@@ -49,9 +53,13 @@ function() {
   document.getElementById('bersaglio' + random2).classList.remove('bersaglio-colpito-' + random2)
       document.getElementById('bersaglio' + random2).classList.add('rotate')
       document.getElementById('bersaglio' + random2).classList.remove('transparent')
+      document.getElementById('bersaglio' + random2).classList.remove('hidden')
+
     }, 5000 + (i * 2000));
     setTimeout(function(){
       document.getElementById('bersaglio' + random2).classList.add('transparent')
+      document.getElementById('bersaglio' + random2).classList.add('hidden')
+
     }, 5000 + 1000 + (i * 2000));
     setTimeout(function(){
       document.getElementById('bersaglio' + random2).classList.remove('rotate')
@@ -74,9 +82,13 @@ function() {
   document.getElementById('bersaglio' + random).classList.remove('bersaglio-colpito-' + random)
       document.getElementById('bersaglio' + random).classList.add('rotate')
       document.getElementById('bersaglio' + random).classList.remove('transparent')
+      document.getElementById('bersaglio' + random).classList.remove('hidden')
+
     }, 28500 + (i * 2000));
     setTimeout(function(){
       document.getElementById('bersaglio' + random).classList.add('transparent')
+      document.getElementById('bersaglio' + random).classList.add('hidden')
+
     }, 28500 + 1000 + (i * 2000));
     setTimeout(function(){
       document.getElementById('bersaglio' + random).classList.remove('rotate')
@@ -93,9 +105,13 @@ function() {
   document.getElementById('bersaglio' + random2).classList.remove('bersaglio-colpito-' + random2)
       document.getElementById('bersaglio' + random2).classList.add('rotate')
       document.getElementById('bersaglio' + random2).classList.remove('transparent')
+      document.getElementById('bersaglio' + random2).classList.remove('hidden')
+
     }, 28500 + (i * 2000));
     setTimeout(function(){
       document.getElementById('bersaglio' + random2).classList.add('transparent')
+      document.getElementById('bersaglio' + random2).classList.add('hidden')
+
     }, 28500 + 1000 + (i * 2000));
     setTimeout(function(){
       document.getElementById('bersaglio' + random2).classList.remove('rotate')
@@ -121,9 +137,13 @@ function() {
   document.getElementById('bersaglio' + random3).classList.remove('bersaglio-colpito-' + random3)
       document.getElementById('bersaglio' + random3).classList.add('rotate')
       document.getElementById('bersaglio' + random3).classList.remove('transparent')
+      document.getElementById('bersaglio' + random3).classList.remove('hidden')
+
     }, 28500 + (i * 2000));
     setTimeout(function(){
       document.getElementById('bersaglio' + random3).classList.add('transparent')
+      document.getElementById('bersaglio' + random3).classList.add('hidden')
+
     }, 28500 + 1000 + (i * 2000));
     setTimeout(function(){
       document.getElementById('bersaglio' + random3).classList.remove('rotate')
@@ -146,9 +166,13 @@ function() {
   document.getElementById('bersaglio' + random).classList.remove('bersaglio-colpito-' + random)
       document.getElementById('bersaglio' + random).classList.add('rotate')
       document.getElementById('bersaglio' + random).classList.remove('transparent')
+      document.getElementById('bersaglio' + random).classList.remove('hidden')
+
     }, 58500 + (i * 2000));
     setTimeout(function(){
       document.getElementById('bersaglio' + random).classList.add('transparent')
+      document.getElementById('bersaglio' + random).classList.add('hidden')
+
     }, 58500 + 1000 + (i * 2000));
     setTimeout(function(){
       document.getElementById('bersaglio' + random).classList.remove('rotate')
@@ -165,9 +189,13 @@ function() {
   document.getElementById('bersaglio' + random2).classList.remove('bersaglio-colpito-' + random2)
       document.getElementById('bersaglio' + random2).classList.add('rotate')
       document.getElementById('bersaglio' + random2).classList.remove('transparent')
+      document.getElementById('bersaglio' + random2).classList.remove('hidden')
+
     }, 58500 + (i * 2000));
     setTimeout(function(){
       document.getElementById('bersaglio' + random2).classList.add('transparent')
+      document.getElementById('bersaglio' + random2).classList.add('hidden')
+
     }, 58500 + 1000 + (i * 2000));
     setTimeout(function(){
       document.getElementById('bersaglio' + random2).classList.remove('rotate')
@@ -193,9 +221,13 @@ function() {
   document.getElementById('bersaglio' + random3).classList.remove('bersaglio-colpito-' + random3)
       document.getElementById('bersaglio' + random3).classList.add('rotate')
       document.getElementById('bersaglio' + random3).classList.remove('transparent')
+      document.getElementById('bersaglio' + random3).classList.remove('hidden')
+
     }, 58500 + (i * 2000));
     setTimeout(function(){
       document.getElementById('bersaglio' + random3).classList.add('transparent')
+      document.getElementById('bersaglio' + random3).classList.add('hidden')
+
     }, 58500 + 1000 + (i * 2000));
     setTimeout(function(){
       document.getElementById('bersaglio' + random3).classList.remove('rotate')
@@ -206,36 +238,36 @@ function() {
 document.getElementById('bersaglio1').addEventListener('click',
 function() {
   document.getElementById('bersaglio1').classList.add('bersaglio-colpito-1');
-  document.getElementById('overlay').classList.remove('bang');
+  document.getElementById('mirino-insanguinato').classList.remove('bang');
   setTimeout(function(){
-    document.getElementById('overlay').classList.add('bang');
+    document.getElementById('mirino-insanguinato').classList.add('bang');
   }, 100);
   setTimeout(function(){
-    document.getElementById('overlay').classList.remove('bang');
+    document.getElementById('mirino-insanguinato').classList.remove('bang');
   }, 300);
 });
 
 document.getElementById('bersaglio2').addEventListener('click',
 function() {
   document.getElementById('bersaglio2').classList.add('bersaglio-colpito-2');
-  document.getElementById('overlay').classList.remove('bang');
+  document.getElementById('mirino-insanguinato').classList.remove('bang');
   setTimeout(function(){
-    document.getElementById('overlay').classList.add('bang');
+    document.getElementById('mirino-insanguinato').classList.add('bang');
   }, 100);
   setTimeout(function(){
-    document.getElementById('overlay').classList.remove('bang');
+    document.getElementById('mirino-insanguinato').classList.remove('bang');
   }, 300);
 
 });
 document.getElementById('bersaglio3').addEventListener('click',
 function() {
   document.getElementById('bersaglio3').classList.add('bersaglio-colpito-3');
-  document.getElementById('overlay').classList.remove('bang');
+  document.getElementById('mirino-insanguinato').classList.remove('bang');
   setTimeout(function(){
-    document.getElementById('overlay').classList.add('bang');
+    document.getElementById('mirino-insanguinato').classList.add('bang');
   }, 100);
   setTimeout(function(){
-    document.getElementById('overlay').classList.remove('bang');
+    document.getElementById('mirino-insanguinato').classList.remove('bang');
   }, 300);
 
 });
@@ -243,12 +275,12 @@ function() {
 document.getElementById('bersaglio4').addEventListener('click',
 function() {
   document.getElementById('bersaglio4').classList.add('bersaglio-colpito-4');
-  document.getElementById('overlay').classList.remove('bang');
+  document.getElementById('mirino-insanguinato').classList.remove('bang');
   setTimeout(function(){
-    document.getElementById('overlay').classList.add('bang');
+    document.getElementById('mirino-insanguinato').classList.add('bang');
   }, 100);
   setTimeout(function(){
-    document.getElementById('overlay').classList.remove('bang');
+    document.getElementById('mirino-insanguinato').classList.remove('bang');
   }, 300);
 
 });
@@ -256,12 +288,12 @@ function() {
 document.getElementById('bersaglio5').addEventListener('click',
 function() {
   document.getElementById('bersaglio5').classList.add('bersaglio-colpito-5');
-  document.getElementById('overlay').classList.remove('bang');
+  document.getElementById('mirino-insanguinato').classList.remove('bang');
   setTimeout(function(){
-    document.getElementById('overlay').classList.add('bang');
+    document.getElementById('mirino-insanguinato').classList.add('bang');
   }, 100);
   setTimeout(function(){
-    document.getElementById('overlay').classList.remove('bang');
+    document.getElementById('mirino-insanguinato').classList.remove('bang');
   }, 300);
 
 });
@@ -269,12 +301,12 @@ function() {
 document.getElementById('bersaglio6').addEventListener('click',
 function() {
   document.getElementById('bersaglio6').classList.add('bersaglio-colpito-6');
-  document.getElementById('overlay').classList.remove('bang');
+  document.getElementById('mirino-insanguinato').classList.remove('bang');
   setTimeout(function(){
-    document.getElementById('overlay').classList.add('bang');
+    document.getElementById('mirino-insanguinato').classList.add('bang');
   }, 100);
   setTimeout(function(){
-    document.getElementById('overlay').classList.remove('bang');
+    document.getElementById('mirino-insanguinato').classList.remove('bang');
   }, 300);
 
 });
@@ -282,12 +314,12 @@ function() {
 document.getElementById('bersaglio7').addEventListener('click',
 function() {
   document.getElementById('bersaglio7').classList.add('bersaglio-colpito-7');
-  document.getElementById('overlay').classList.remove('bang');
+  document.getElementById('mirino-insanguinato').classList.remove('bang');
   setTimeout(function(){
-    document.getElementById('overlay').classList.add('bang');
+    document.getElementById('mirino-insanguinato').classList.add('bang');
   }, 100);
   setTimeout(function(){
-    document.getElementById('overlay').classList.remove('bang');
+    document.getElementById('mirino-insanguinato').classList.remove('bang');
   }, 300);
 
 });
@@ -295,12 +327,12 @@ function() {
 document.getElementById('bersaglio8').addEventListener('click',
 function() {
   document.getElementById('bersaglio8').classList.add('bersaglio-colpito-8');
-  document.getElementById('overlay').classList.remove('bang');
+  document.getElementById('mirino-insanguinato').classList.remove('bang');
   setTimeout(function(){
-    document.getElementById('overlay').classList.add('bang');
+    document.getElementById('mirino-insanguinato').classList.add('bang');
   }, 100);
   setTimeout(function(){
-    document.getElementById('overlay').classList.remove('bang');
+    document.getElementById('mirino-insanguinato').classList.remove('bang');
   }, 300);
 
 });
@@ -308,12 +340,24 @@ function() {
 document.getElementById('bersaglio9').addEventListener('click',
 function() {
   document.getElementById('bersaglio9').classList.add('bersaglio-colpito-9');
-  document.getElementById('overlay').classList.remove('bang');
+  document.getElementById('mirino-insanguinato').classList.remove('bang');
   setTimeout(function(){
-    document.getElementById('overlay').classList.add('bang');
+    document.getElementById('mirino-insanguinato').classList.add('bang');
   }, 100);
   setTimeout(function(){
-    document.getElementById('overlay').classList.remove('bang');
+    document.getElementById('mirino-insanguinato').classList.remove('bang');
+  }, 300);
+
+});
+
+document.getElementById('overlay').addEventListener('click',
+function() {
+  document.getElementById('mirino').classList.remove('bang');
+  setTimeout(function(){
+    document.getElementById('mirino').classList.add('bang');
+  }, 100);
+  setTimeout(function(){
+    document.getElementById('mirino').classList.remove('bang');
   }, 300);
 
 });
