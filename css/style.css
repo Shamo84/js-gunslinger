@@ -27,7 +27,6 @@ h1 {
 .overlay {
   width: 100%;
   height: 100%;
-  z-index: 0;
 }
 .mirino-insanguinato,
 .mirino-esplosivo,
@@ -204,7 +203,7 @@ h1 {
   animation-name: animazione-sx;
   animation-duration: 10s;
   animation-timing-function: linear;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 10;
 }
 
 @keyframes animazione-sx {
@@ -222,7 +221,7 @@ h1 {
   animation-name: animazione-centro;
   animation-duration: 10s;
   animation-timing-function: linear;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 10;
 }
 
 @keyframes animazione-centro {
@@ -243,7 +242,7 @@ h1 {
   animation-name: animazione-dx;
   animation-duration: 10s;
   animation-timing-function: linear;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 10;
 }
 
 @keyframes animazione-dx {
