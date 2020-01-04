@@ -14,6 +14,10 @@ body {
   position: relative;
 }
 
+.crosshair {
+  cursor: crosshair;
+}
+
 body > img,
 body > div {
   position: absolute;
@@ -89,9 +93,8 @@ body > div {
 }
 
 .bersaglio {
-  transform: translate(-50%, -50%);
-  /* transform: translateX(-50%) rotateY(180deg);
-  backface-visibility: hidden; */
+  transform: translate(-50%, -50%) rotateY(180deg);
+  backface-visibility: hidden;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -105,55 +108,55 @@ body > div {
 .ground {
   top: 76%;
 }
-#helicopter {
+.bersaglio1 {
   background-image: url(../img/helicopter.png);
   left: 20%;
   width: 25%;
   height: 19%;
 }
-#jet {
-  background-image: url(../img/jet.png);
+.bersaglio2 {
+  background-image: url(../img/jet2.png);
   left: 50%;
-  width: 25%;
-  height: 16%;
+  width: 23%;
+  height: 20%;
 }
-#air-balloon {
+.bersaglio3 {
   background-image: url(../img/air-balloon.png);
   left: 80%;
-  width: 15%;
-  height: 35%;
+  width: 17%;
+  height: 36%;
 }
-#eagle {
+.bersaglio4 {
   background-image: url(../img/eagle.png);
   left: 20%;
   width: 22%;
   height: 18%;
 }
-#black-eagle {
-  background-image: url(../img/black-eagle.png);
+.bersaglio5 {
+  background-image: url(../img/dragon.png);
   left: 50%;
-  width: 23%;
-  height: 28%;
+  width: 16%;
+  height: 29%;
 }
-#owl {
+.bersaglio6 {
   background-image: url(../img/owl.png);
   left: 80%;
   width: 17%;
   height: 21%;
 }
-#gunman1 {
+.bersaglio7 {
   background-image: url(../img/gunman1.png);
   left: 20%;
   width: 17%;
   height: 30%;
 }
-#gunman2 {
+.bersaglio8 {
   background-image: url(../img/gunman2.png);
   left: 50%;
   height: 32%;
   width: 16%;
 }
-#gunman3 {
+.bersaglio9 {
   background-image: url(../img/gunman3.png);
   left: 80%;
   width: 10.5%;
@@ -219,6 +222,46 @@ body > div {
 }
 
 .rotate {
+  transform: translate(-50%, -50%) rotateY(0);
+  transition: transform 1s;
+}
+.transparent {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.bersaglio-colpito-1 {
+  background-image: url(../img/helicopterx.png);
   transition: 1s;
-  transform: translateX(-50%) rotateY(0);
+}
+.bersaglio-colpito-2 {
+  background-image: url(../img/jet2x.png);
+  transition: 1s;
+}
+.bersaglio-colpito-3 {
+  background-image: url(../img/air-balloonx.png);
+  transition: 1s;
+}
+.bersaglio-colpito-4 {
+  background-image: url(../img/eaglex.png);
+  transition: 1s;
+}
+.bersaglio-colpito-5 {
+  background-image: url(../img/dragonx.png);
+  transition: 1s;
+}
+.bersaglio-colpito-6 {
+  background-image: url(../img/owlx.png);
+  transition: 1s;
+}
+.bersaglio-colpito-7 {
+  background-image: url(../img/gunman1x.png);
+  transition: 1s;
+}
+.bersaglio-colpito-8 {
+  background-image: url(../img/gunman2x.png);
+  transition: 1s;
+}
+.bersaglio-colpito-9 {
+  background-image: url(../img/gunman3x.png);
+  transition: 1s;
 }
