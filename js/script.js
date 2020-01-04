@@ -231,7 +231,6 @@ function() {
       document.getElementById('bersaglio' + random3).classList.remove('rotate');
     }, 74000 + 2300 + (i * 2500));
   }
-
 });
 document.getElementById('bersaglio1').addEventListener('click',
 function() {
