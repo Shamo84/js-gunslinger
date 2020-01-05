@@ -48,7 +48,7 @@ function() {
     document.getElementById('difficolta').classList.add('transparent');
     document.getElementById('body').classList.add('crosshair');
     document.getElementById('overlay').classList.remove('hidden');
-  }, 4000);
+  }, 3500);
 
   for (var i = 0; i <=9; i++) {
     setTimeout(function(){
@@ -62,17 +62,17 @@ function() {
       document.getElementById('bersaglio' + randomcute).classList.add('rotate');
       document.getElementById('bersaglio' + randomcute).classList.remove('transparent');
       document.getElementById('bersaglio' + randomcute).classList.remove('hidden');
-    }, 5000 + (i * 3000));
+    }, 4500 + (i * 3000));
     setTimeout(function(){
       document.getElementById('bersaglio' + random).classList.add('transparent');
       document.getElementById('bersaglio' + random).classList.add('hidden');
       document.getElementById('bersaglio' + randomcute).classList.add('transparent');
       document.getElementById('bersaglio' + randomcute).classList.add('hidden');
-    }, 5000 + 2000 + (i * 3000));
+    }, 4500 + 2000 + (i * 3000));
     setTimeout(function(){
       document.getElementById('bersaglio' + random).classList.remove('rotate');
       document.getElementById('bersaglio' + randomcute).classList.remove('rotate');
-    }, 5000 + 2800 + (i * 3000));
+    }, 4500 + 2800 + (i * 3000));
     setTimeout(function(){
       random2 = Math.floor(Math.random() * 9 + 1);
       if (random == random2) {
@@ -85,14 +85,14 @@ function() {
       document.getElementById('bersaglio' + random2).classList.add('rotate');
       document.getElementById('bersaglio' + random2).classList.remove('transparent');
       document.getElementById('bersaglio' + random2).classList.remove('hidden');
-    }, 5000 + (i * 3000));
+    }, 4500 + (i * 3000));
     setTimeout(function(){
       document.getElementById('bersaglio' + random2).classList.add('transparent');
       document.getElementById('bersaglio' + random2).classList.add('hidden');
-    }, 5000 + 2000 + (i * 3000));
+    }, 4500 + 2000 + (i * 3000));
     setTimeout(function(){
       document.getElementById('bersaglio' + random2).classList.remove('rotate');
-    }, 5000 + 2800 + (i * 3000));
+    }, 4500 + 2800 + (i * 3000));
   }
 
 // LIVELLO INTERMEDIO
@@ -101,12 +101,12 @@ function() {
     document.getElementById('body').classList.remove('crosshair');
     document.getElementById('difficolta').innerHTML = 'Intermedio';
     document.getElementById('difficolta').classList.remove('transparent');
-  }, 36000 );
+  }, 35500 );
   setTimeout(function(){
     document.getElementById('difficolta').classList.add('transparent');
     document.getElementById('body').classList.add('crosshair');
     document.getElementById('overlay').classList.remove('hidden');
-  }, 38500 );
+  }, 37500 );
 
   for (var i = 0; i <=9; i++) {
     setTimeout(function(){
@@ -120,17 +120,17 @@ function() {
       document.getElementById('bersaglio' + randomcute).classList.add('rotate');
       document.getElementById('bersaglio' + randomcute).classList.remove('transparent');
       document.getElementById('bersaglio' + randomcute).classList.remove('hidden');
-    }, 39500 + (i * 3000));
+    }, 38500 + (i * 3000));
     setTimeout(function(){
       document.getElementById('bersaglio' + random).classList.add('transparent');
       document.getElementById('bersaglio' + random).classList.add('hidden');
       document.getElementById('bersaglio' + randomcute).classList.add('transparent');
       document.getElementById('bersaglio' + randomcute).classList.add('hidden');
-    }, 39500 + 2000 + (i * 3000));
+    }, 38500 + 2000 + (i * 3000));
     setTimeout(function(){
       document.getElementById('bersaglio' + random).classList.remove('rotate');
       document.getElementById('bersaglio' + randomcute).classList.remove('rotate');
-    }, 39500 + 2800 + (i * 3000));
+    }, 38500 + 2800 + (i * 3000));
 
     setTimeout(function(){
       random2 = Math.floor(Math.random() * 9 + 1);
@@ -144,14 +144,14 @@ function() {
       document.getElementById('bersaglio' + random2).classList.add('rotate');
       document.getElementById('bersaglio' + random2).classList.remove('transparent');
       document.getElementById('bersaglio' + random2).classList.remove('hidden');
-    }, 39500 + (i * 3000));
+    }, 38500 + (i * 3000));
     setTimeout(function(){
       document.getElementById('bersaglio' + random2).classList.add('transparent');
       document.getElementById('bersaglio' + random2).classList.add('hidden');
-    }, 39500 + 2000 + (i * 3000));
+    }, 38500 + 2000 + (i * 3000));
     setTimeout(function(){
       document.getElementById('bersaglio' + random2).classList.remove('rotate');
-    }, 39500 + 2800 + (i * 3000));
+    }, 38500 + 2800 + (i * 3000));
 
     setTimeout(function(){
       random3 = Math.floor(Math.random() * 9 + 1);
@@ -174,14 +174,14 @@ function() {
       document.getElementById('bersaglio' + random3).classList.add('rotate');
       document.getElementById('bersaglio' + random3).classList.remove('transparent');
       document.getElementById('bersaglio' + random3).classList.remove('hidden');
-    }, 39500 + (i * 3000));
+    }, 38500 + (i * 3000));
     setTimeout(function(){
       document.getElementById('bersaglio' + random3).classList.add('transparent');
       document.getElementById('bersaglio' + random3).classList.add('hidden');
-    }, 39500 + 2000 + (i * 3000));
+    }, 38500 + 2000 + (i * 3000));
     setTimeout(function(){
       document.getElementById('bersaglio' + random3).classList.remove('rotate');
-    }, 39500 + 2800 + (i * 3000));
+    }, 38500 + 2800 + (i * 3000));
   }
 
 // LIVELLO DIFFICILE
@@ -190,13 +190,13 @@ function() {
     document.getElementById('body').classList.remove('crosshair');
     document.getElementById('difficolta').innerHTML = 'Difficile';
     document.getElementById('difficolta').classList.remove('transparent');
-  }, 70500);
+  }, 69500);
   setTimeout(function(){
     document.getElementById('difficolta').classList.add('transparent');
     document.getElementById('body').classList.add('crosshair');
     document.getElementById('overlay').classList.remove('hidden');
 
-  }, 73000);
+  }, 71500);
 
   for (var i = 0; i <=9; i++) {
     setTimeout(function(){
@@ -210,18 +210,18 @@ function() {
       document.getElementById('bersaglio' + randomcute).classList.add('rotate');
       document.getElementById('bersaglio' + randomcute).classList.remove('transparent');
       document.getElementById('bersaglio' + randomcute).classList.remove('hidden');
-    }, 74000 + (i * 2500));
+    }, 72500 + (i * 2500));
     setTimeout(function(){
       document.getElementById('bersaglio' + random).classList.add('transparent');
       document.getElementById('bersaglio' + random).classList.add('hidden');
       document.getElementById('bersaglio' + randomcute).classList.add('transparent');
       document.getElementById('bersaglio' + randomcute).classList.add('hidden');
 
-    }, 74000 + 1500 + (i * 2500));
+    }, 72500 + 1500 + (i * 2500));
     setTimeout(function(){
       document.getElementById('bersaglio' + random).classList.remove('rotate');
       document.getElementById('bersaglio' + randomcute).classList.remove('rotate');
-    }, 74000 + 2300 + (i * 2500));
+    }, 72500 + 2300 + (i * 2500));
 
     setTimeout(function(){
       random2 = Math.floor(Math.random() * 9 + 1);
@@ -236,15 +236,15 @@ function() {
       document.getElementById('bersaglio' + random2).classList.remove('transparent');
       document.getElementById('bersaglio' + random2).classList.remove('hidden');
 
-    }, 74000 + (i * 2500));
+    }, 72500 + (i * 2500));
     setTimeout(function(){
       document.getElementById('bersaglio' + random2).classList.add('transparent');
       document.getElementById('bersaglio' + random2).classList.add('hidden');
 
-    }, 74000 + 1500 + (i * 2500));
+    }, 72500 + 1500 + (i * 2500));
     setTimeout(function(){
       document.getElementById('bersaglio' + random2).classList.remove('rotate');
-    }, 74000 + 2300 + (i * 2500));
+    }, 72500 + 2300 + (i * 2500));
 
     setTimeout(function(){
       random3 = Math.floor(Math.random() * 9 + 1);
@@ -268,15 +268,15 @@ function() {
       document.getElementById('bersaglio' + random3).classList.remove('transparent');
       document.getElementById('bersaglio' + random3).classList.remove('hidden');
 
-    }, 74000 + (i * 2500));
+    }, 72500 + (i * 2500));
     setTimeout(function(){
       document.getElementById('bersaglio' + random3).classList.add('transparent');
       document.getElementById('bersaglio' + random3).classList.add('hidden');
 
-    }, 74000 + 1500 + (i * 2500));
+    }, 72500 + 1500 + (i * 2500));
     setTimeout(function(){
       document.getElementById('bersaglio' + random3).classList.remove('rotate');
-    }, 74000 + 2300 + (i * 2500));
+    }, 72500 + 2300 + (i * 2500));
   }
 });
 document.getElementById('bersaglio1').addEventListener('click',
