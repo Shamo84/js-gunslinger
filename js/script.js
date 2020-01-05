@@ -1,10 +1,25 @@
 var random = 1;
 var random2 = 1;
 var random3 = 1;
+var randomcute = 1;
 
 document.getElementById('gioca').addEventListener('click',
 function() {
-  document.getElementById('gioca').classList.add('hidden');
+
+  document.getElementById('mirino-insanguinato').classList.add('big');
+  document.getElementById('mirino-insanguinato').classList.add('bang');
+  setTimeout(function(){
+    document.getElementById('mirino-insanguinato').classList.add('sparizione-mirino');
+    document.getElementById('mirino-insanguinato').classList.remove('bang');
+    document.getElementById('titolo').classList.add('sparizione-mirino');
+    document.getElementById('gioca').classList.add('sparizione-mirino');
+  }, 1000);
+  setTimeout(function(){
+    document.getElementById('mirino-insanguinato').classList.remove('big', 'sparizione-mirino');
+    document.getElementById('titolo').classList.add('hidden');
+    document.getElementById('gioca').classList.add('hidden');
+  }, 1800);
+  document.getElementById('sipariotop').classList.add('sipario-top');
   document.getElementById('sipariodx').classList.add('sipario-dx');
   document.getElementById('sipariosx').classList.add('sipario-sx');
   document.getElementById('bersaglio1').classList.add('animazione-sx');
@@ -16,8 +31,15 @@ function() {
   document.getElementById('bersaglio7').classList.add('animazione-sx');
   document.getElementById('bersaglio8').classList.add('animazione-centro');
   document.getElementById('bersaglio9').classList.add('animazione-dx');
+  document.getElementById('bersaglio10').classList.add('animazione-sx-cat');
+  document.getElementById('bersaglio11').classList.add('animazione-dx-bird');
+  document.getElementById('bersaglio12').classList.add('animazione-sx-cat');
+  document.getElementById('bersaglio13').classList.add('animazione-dx-bird');
+  document.getElementById('bersaglio14').classList.add('animazione-sx-cat');
+  document.getElementById('bersaglio15').classList.add('animazione-dx-bird');
   document.getElementById('overlay').classList.add('hidden');
 
+// LIVELLO FACILE
   setTimeout(function(){
     document.getElementById('difficolta').innerHTML = 'Facile';
     document.getElementById('difficolta').classList.remove('transparent');
@@ -35,13 +57,21 @@ function() {
       document.getElementById('bersaglio' + random).classList.add('rotate');
       document.getElementById('bersaglio' + random).classList.remove('transparent');
       document.getElementById('bersaglio' + random).classList.remove('hidden');
+      randomcute = Math.floor(Math.random() * 6 + 10);
+      document.getElementById('bersaglio' + randomcute).classList.remove('bersaglio-colpito-' + randomcute);
+      document.getElementById('bersaglio' + randomcute).classList.add('rotate');
+      document.getElementById('bersaglio' + randomcute).classList.remove('transparent');
+      document.getElementById('bersaglio' + randomcute).classList.remove('hidden');
     }, 5000 + (i * 3000));
     setTimeout(function(){
       document.getElementById('bersaglio' + random).classList.add('transparent');
       document.getElementById('bersaglio' + random).classList.add('hidden');
+      document.getElementById('bersaglio' + randomcute).classList.add('transparent');
+      document.getElementById('bersaglio' + randomcute).classList.add('hidden');
     }, 5000 + 2000 + (i * 3000));
     setTimeout(function(){
       document.getElementById('bersaglio' + random).classList.remove('rotate');
+      document.getElementById('bersaglio' + randomcute).classList.remove('rotate');
     }, 5000 + 2800 + (i * 3000));
     setTimeout(function(){
       random2 = Math.floor(Math.random() * 9 + 1);
@@ -65,6 +95,7 @@ function() {
     }, 5000 + 2800 + (i * 3000));
   }
 
+// LIVELLO INTERMEDIO
   setTimeout(function(){
     document.getElementById('overlay').classList.add('hidden');
     document.getElementById('body').classList.remove('crosshair');
@@ -84,13 +115,21 @@ function() {
       document.getElementById('bersaglio' + random).classList.add('rotate');
       document.getElementById('bersaglio' + random).classList.remove('transparent');
       document.getElementById('bersaglio' + random).classList.remove('hidden');
+      randomcute = Math.floor(Math.random() * 6 + 10);
+      document.getElementById('bersaglio' + randomcute).classList.remove('bersaglio-colpito-' + randomcute);
+      document.getElementById('bersaglio' + randomcute).classList.add('rotate');
+      document.getElementById('bersaglio' + randomcute).classList.remove('transparent');
+      document.getElementById('bersaglio' + randomcute).classList.remove('hidden');
     }, 39500 + (i * 3000));
     setTimeout(function(){
       document.getElementById('bersaglio' + random).classList.add('transparent');
       document.getElementById('bersaglio' + random).classList.add('hidden');
+      document.getElementById('bersaglio' + randomcute).classList.add('transparent');
+      document.getElementById('bersaglio' + randomcute).classList.add('hidden');
     }, 39500 + 2000 + (i * 3000));
     setTimeout(function(){
       document.getElementById('bersaglio' + random).classList.remove('rotate');
+      document.getElementById('bersaglio' + randomcute).classList.remove('rotate');
     }, 39500 + 2800 + (i * 3000));
 
     setTimeout(function(){
@@ -145,6 +184,7 @@ function() {
     }, 39500 + 2800 + (i * 3000));
   }
 
+// LIVELLO DIFFICILE
   setTimeout(function(){
     document.getElementById('overlay').classList.add('hidden');
     document.getElementById('body').classList.remove('crosshair');
@@ -165,15 +205,22 @@ function() {
       document.getElementById('bersaglio' + random).classList.add('rotate');
       document.getElementById('bersaglio' + random).classList.remove('transparent');
       document.getElementById('bersaglio' + random).classList.remove('hidden');
-
+      randomcute = Math.floor(Math.random() * 6 + 10);
+      document.getElementById('bersaglio' + randomcute).classList.remove('bersaglio-colpito-' + randomcute);
+      document.getElementById('bersaglio' + randomcute).classList.add('rotate');
+      document.getElementById('bersaglio' + randomcute).classList.remove('transparent');
+      document.getElementById('bersaglio' + randomcute).classList.remove('hidden');
     }, 74000 + (i * 2500));
     setTimeout(function(){
       document.getElementById('bersaglio' + random).classList.add('transparent');
       document.getElementById('bersaglio' + random).classList.add('hidden');
+      document.getElementById('bersaglio' + randomcute).classList.add('transparent');
+      document.getElementById('bersaglio' + randomcute).classList.add('hidden');
 
     }, 74000 + 1500 + (i * 2500));
     setTimeout(function(){
       document.getElementById('bersaglio' + random).classList.remove('rotate');
+      document.getElementById('bersaglio' + randomcute).classList.remove('rotate');
     }, 74000 + 2300 + (i * 2500));
 
     setTimeout(function(){
@@ -238,6 +285,7 @@ function() {
   document.getElementById('mirino').classList.remove('bang', 'sparizione-mirino');
   document.getElementById('mirino-insanguinato').classList.remove('bang', 'sparizione-mirino');
   document.getElementById('mirino-esplosivo').classList.remove('bang', 'sparizione-mirino');
+  document.getElementById('mirino-sad').classList.remove('bang', 'sparizione-mirino');
   setTimeout(function(){
     document.getElementById('mirino-esplosivo').classList.add('bang');
   }, 100);
@@ -253,6 +301,7 @@ function() {
   document.getElementById('mirino').classList.remove('bang', 'sparizione-mirino');
   document.getElementById('mirino-insanguinato').classList.remove('bang', 'sparizione-mirino');
   document.getElementById('mirino-esplosivo').classList.remove('bang', 'sparizione-mirino');
+  document.getElementById('mirino-sad').classList.remove('bang', 'sparizione-mirino');
   setTimeout(function(){
     document.getElementById('mirino-esplosivo').classList.add('bang');
   }, 100);
@@ -268,6 +317,7 @@ function() {
   document.getElementById('mirino').classList.remove('bang', 'sparizione-mirino');
   document.getElementById('mirino-insanguinato').classList.remove('bang', 'sparizione-mirino');
   document.getElementById('mirino-esplosivo').classList.remove('bang', 'sparizione-mirino');
+  document.getElementById('mirino-sad').classList.remove('bang', 'sparizione-mirino');
   setTimeout(function(){
     document.getElementById('mirino-esplosivo').classList.add('bang');
   }, 100);
@@ -284,6 +334,7 @@ function() {
   document.getElementById('mirino').classList.remove('bang', 'sparizione-mirino');
   document.getElementById('mirino-insanguinato').classList.remove('bang', 'sparizione-mirino');
   document.getElementById('mirino-esplosivo').classList.remove('bang', 'sparizione-mirino');
+  document.getElementById('mirino-sad').classList.remove('bang', 'sparizione-mirino');
   setTimeout(function(){
     document.getElementById('mirino-insanguinato').classList.add('bang');
   }, 100);
@@ -300,6 +351,7 @@ function() {
   document.getElementById('mirino').classList.remove('bang', 'sparizione-mirino');
   document.getElementById('mirino-insanguinato').classList.remove('bang', 'sparizione-mirino');
   document.getElementById('mirino-esplosivo').classList.remove('bang', 'sparizione-mirino');
+  document.getElementById('mirino-sad').classList.remove('bang', 'sparizione-mirino');
   setTimeout(function(){
     document.getElementById('mirino-insanguinato').classList.add('bang');
   }, 100);
@@ -316,6 +368,7 @@ function() {
   document.getElementById('mirino').classList.remove('bang', 'sparizione-mirino');
   document.getElementById('mirino-insanguinato').classList.remove('bang', 'sparizione-mirino');
   document.getElementById('mirino-esplosivo').classList.remove('bang', 'sparizione-mirino');
+  document.getElementById('mirino-sad').classList.remove('bang', 'sparizione-mirino');
   setTimeout(function(){
     document.getElementById('mirino-insanguinato').classList.add('bang');
   }, 100);
@@ -332,6 +385,7 @@ function() {
   document.getElementById('mirino').classList.remove('bang', 'sparizione-mirino');
   document.getElementById('mirino-insanguinato').classList.remove('bang', 'sparizione-mirino');
   document.getElementById('mirino-esplosivo').classList.remove('bang', 'sparizione-mirino');
+  document.getElementById('mirino-sad').classList.remove('bang', 'sparizione-mirino');
   setTimeout(function(){
     document.getElementById('mirino-insanguinato').classList.add('bang');
   }, 100);
@@ -348,6 +402,7 @@ function() {
   document.getElementById('mirino').classList.remove('bang', 'sparizione-mirino');
   document.getElementById('mirino-insanguinato').classList.remove('bang', 'sparizione-mirino');
   document.getElementById('mirino-esplosivo').classList.remove('bang', 'sparizione-mirino');
+  document.getElementById('mirino-sad').classList.remove('bang', 'sparizione-mirino');
   setTimeout(function(){
     document.getElementById('mirino-insanguinato').classList.add('bang');
   }, 100);
@@ -364,6 +419,7 @@ function() {
   document.getElementById('mirino').classList.remove('bang', 'sparizione-mirino');
   document.getElementById('mirino-insanguinato').classList.remove('bang', 'sparizione-mirino');
   document.getElementById('mirino-esplosivo').classList.remove('bang', 'sparizione-mirino');
+  document.getElementById('mirino-sad').classList.remove('bang', 'sparizione-mirino');
   setTimeout(function(){
     document.getElementById('mirino-insanguinato').classList.add('bang');
   }, 100);
@@ -371,13 +427,104 @@ function() {
     document.getElementById('mirino-insanguinato').classList.add('sparizione-mirino');
     document.getElementById('mirino-insanguinato').classList.remove('bang');
   }, 300);
-
+});
+document.getElementById('bersaglio10').addEventListener('click',
+function() {
+  document.getElementById('bersaglio10').classList.add('bersaglio-colpito-10');
+  document.getElementById('mirino').classList.remove('bang', 'sparizione-mirino');
+  document.getElementById('mirino-insanguinato').classList.remove('bang', 'sparizione-mirino');
+  document.getElementById('mirino-esplosivo').classList.remove('bang', 'sparizione-mirino');
+  document.getElementById('mirino-sad').classList.remove('bang', 'sparizione-mirino');
+  setTimeout(function(){
+    document.getElementById('mirino-sad').classList.add('bang');
+  }, 100);
+  setTimeout(function(){
+    document.getElementById('mirino-sad').classList.add('sparizione-mirino');
+    document.getElementById('mirino-sad').classList.remove('bang');
+  }, 300);
+});
+document.getElementById('bersaglio11').addEventListener('click',
+function() {
+  document.getElementById('bersaglio11').classList.add('bersaglio-colpito-11');
+  document.getElementById('mirino').classList.remove('bang', 'sparizione-mirino');
+  document.getElementById('mirino-insanguinato').classList.remove('bang', 'sparizione-mirino');
+  document.getElementById('mirino-esplosivo').classList.remove('bang', 'sparizione-mirino');
+  document.getElementById('mirino-sad').classList.remove('bang', 'sparizione-mirino');
+  setTimeout(function(){
+    document.getElementById('mirino-sad').classList.add('bang');
+  }, 100);
+  setTimeout(function(){
+    document.getElementById('mirino-sad').classList.add('sparizione-mirino');
+    document.getElementById('mirino-sad').classList.remove('bang');
+  }, 300);
+});
+document.getElementById('bersaglio12').addEventListener('click',
+function() {
+  document.getElementById('bersaglio12').classList.add('bersaglio-colpito-12');
+  document.getElementById('mirino').classList.remove('bang', 'sparizione-mirino');
+  document.getElementById('mirino-insanguinato').classList.remove('bang', 'sparizione-mirino');
+  document.getElementById('mirino-esplosivo').classList.remove('bang', 'sparizione-mirino');
+  document.getElementById('mirino-sad').classList.remove('bang', 'sparizione-mirino');
+  setTimeout(function(){
+    document.getElementById('mirino-sad').classList.add('bang');
+  }, 100);
+  setTimeout(function(){
+    document.getElementById('mirino-sad').classList.add('sparizione-mirino');
+    document.getElementById('mirino-sad').classList.remove('bang');
+  }, 300);
+});
+document.getElementById('bersaglio13').addEventListener('click',
+function() {
+  document.getElementById('bersaglio13').classList.add('bersaglio-colpito-13');
+  document.getElementById('mirino').classList.remove('bang', 'sparizione-mirino');
+  document.getElementById('mirino-insanguinato').classList.remove('bang', 'sparizione-mirino');
+  document.getElementById('mirino-esplosivo').classList.remove('bang', 'sparizione-mirino');
+  document.getElementById('mirino-sad').classList.remove('bang', 'sparizione-mirino');
+  setTimeout(function(){
+    document.getElementById('mirino-sad').classList.add('bang');
+  }, 100);
+  setTimeout(function(){
+    document.getElementById('mirino-sad').classList.add('sparizione-mirino');
+    document.getElementById('mirino-sad').classList.remove('bang');
+  }, 300);
+});
+document.getElementById('bersaglio14').addEventListener('click',
+function() {
+  document.getElementById('bersaglio14').classList.add('bersaglio-colpito-14');
+  document.getElementById('mirino').classList.remove('bang', 'sparizione-mirino');
+  document.getElementById('mirino-insanguinato').classList.remove('bang', 'sparizione-mirino');
+  document.getElementById('mirino-esplosivo').classList.remove('bang', 'sparizione-mirino');
+  document.getElementById('mirino-sad').classList.remove('bang', 'sparizione-mirino');
+  setTimeout(function(){
+    document.getElementById('mirino-sad').classList.add('bang');
+  }, 100);
+  setTimeout(function(){
+    document.getElementById('mirino-sad').classList.add('sparizione-mirino');
+    document.getElementById('mirino-sad').classList.remove('bang');
+  }, 300);
+});
+document.getElementById('bersaglio15').addEventListener('click',
+function() {
+  document.getElementById('bersaglio15').classList.add('bersaglio-colpito-15');
+  document.getElementById('mirino').classList.remove('bang', 'sparizione-mirino');
+  document.getElementById('mirino-insanguinato').classList.remove('bang', 'sparizione-mirino');
+  document.getElementById('mirino-esplosivo').classList.remove('bang', 'sparizione-mirino');
+  document.getElementById('mirino-sad').classList.remove('bang', 'sparizione-mirino');
+  setTimeout(function(){
+    document.getElementById('mirino-sad').classList.add('bang');
+  }, 100);
+  setTimeout(function(){
+    document.getElementById('mirino-sad').classList.add('sparizione-mirino');
+    document.getElementById('mirino-sad').classList.remove('bang');
+  }, 300);
 });
 
 document.getElementById('overlay').addEventListener('click',
 function() {
   document.getElementById('mirino').classList.remove('bang', 'sparizione-mirino');
   document.getElementById('mirino-insanguinato').classList.remove('bang', 'sparizione-mirino');
+  document.getElementById('mirino-esplosivo').classList.remove('bang', 'sparizione-mirino');
+  document.getElementById('mirino-sad').classList.remove('bang', 'sparizione-mirino');
   setTimeout(function(){
     document.getElementById('mirino').classList.add('bang');
   }, 100);

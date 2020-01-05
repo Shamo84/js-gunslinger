@@ -5,6 +5,7 @@
 }
 body {
   width: 100vw;
+  /* max-width: 200vh; */
   height: calc(100vw * 9 / 16);
   max-height: 100vh;
   background-image: url(../img/Desert-Background.jpg);
@@ -21,15 +22,17 @@ body {
 
 body > img,
 body > div,
-h1 {
+h2 {
   position: absolute;
 }
 .overlay {
   width: 100%;
   height: 100%;
 }
+
 .mirino-insanguinato,
 .mirino-esplosivo,
+.mirino-sad,
 .mirino {
   top: 50%;
   left: 50%;
@@ -39,6 +42,11 @@ h1 {
   z-index: -1;
   opacity: 0;
 }
+.big {
+  width: 100vh;
+  height: 100vh;
+  z-index: 3;
+}
 .sparizione-mirino {
   opacity: 0;
   transition: opacity 0.8s;
@@ -46,10 +54,9 @@ h1 {
 .bang {
   opacity: 1;
   transition: opacity 0s;
-
 }
 
-h1 {
+h2 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -60,11 +67,51 @@ h1 {
   z-index: -1;
 }
 .gioca {
-  background-color: red;
+  bottom: 10%;
   left: 50%;
-  bottom: 0;
-  font-size: 7vw;
-  z-index: 3;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.65);
+  border: 0.2vw solid white;
+  border-radius: 1vw;
+  padding: 0 3vw;
+  font-size: 6vw;
+  text-shadow: .2vw .2vw #ff0207;
+  z-index: 2;
+}
+.titolo {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 55%;
+  width: 77%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+.titolo > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+.rifle {
+  width: 100%;
+}
+h1 {
+  font-size: 7.5vw;
+  color: white;
+  text-shadow: .2vw .2vw black;
+}
+.gunslingersx {
+  width: 25%;
+  max-width: calc(55vh * 381 / 600);
+  max-height: 55vh;
+}
+.gunslingerdx {
+  width: 25%;
+  max-width: calc(55vh * 381 / 600);
+  max-height: 55vh;
 }
 
 #sipariotop {
@@ -72,9 +119,8 @@ h1 {
   position: fixed;
   top: 0;
   width: 100%;
-  height: calc(100vw * 9 / 16 * 0.14);
+  height: calc(100vw * 9 / 16 * 0.19);
 }
-
 #sipariosx {
   position: fixed;
   left: 0;
@@ -82,7 +128,6 @@ h1 {
   height: calc(93vw * 9 / 16);
   width: 50%;
   z-index: 2;
-
 }
 #sipariodx {
   position: fixed;
@@ -93,13 +138,27 @@ h1 {
   z-index: 2;
 }
 
+.sipario-top {
+  animation-name: sipario-top;
+  animation-duration: 3s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes sipario-top {
+  0% {
+    height: calc(100vw * 9 / 16 * 0.19);
+  }
+  100% {
+    height: calc(100vw * 9 / 16 * 0.14);
+  }
+}
 .sipario-dx {
   animation-name: sipario-dx;
   animation-duration: 3s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }
-
 @keyframes sipario-dx {
   0% {
     width: 50%;
@@ -116,7 +175,6 @@ h1 {
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }
-
 @keyframes sipario-sx {
   0% {
     width: 50%;
@@ -198,6 +256,48 @@ h1 {
   width: 10.5%;
   height: 32%;
 }
+.bersaglio10 {
+  background-image: url(../img/cat-balloon.png);
+  left: 35%;
+  top: 34%;
+  width: 8%;
+  height: 37%;
+}
+.bersaglio11 {
+  background-image: url(../img/cute-bird.png);
+  left: 65%;
+  top: 60%;
+  height: 22%;
+  width: 13%;
+}
+.bersaglio12 {
+  background-image: url(../img/cat.png);
+  left: 35%;
+  top: 81%;
+  width: 10%;
+  height: 22%;
+}
+.bersaglio13 {
+  background-image: url(../img/cute-balloon.png);
+  left: 65%;
+  top: 34%;
+  width: 8%;
+  height: 26%;
+}
+.bersaglio14 {
+  background-image: url(../img/cute-bird2.png);
+  left: 35%;
+  top: 60%;
+  height: 22%;
+  width: 11%;
+}
+.bersaglio15 {
+  background-image: url(../img/fox.png);
+  left: 65%;
+  top: 81%;
+  width: 10.5%;
+  height: 19%;
+}
 
 .animazione-sx {
   animation-name: animazione-sx;
@@ -256,6 +356,48 @@ h1 {
     left: 80%;
   }
 }
+.animazione-sx-cat {
+  animation-name: animazione-sx-cat;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 20;
+}
+
+@keyframes animazione-sx-cat {
+  0% {
+    left: 35%;
+  }
+  12.5% {
+    left: 20%;
+  }
+  62.5% {
+    left: 80%;
+  }
+  100% {
+    left: 35%;
+  }
+}
+.animazione-dx-bird {
+  animation-name: animazione-dx-bird;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 20;
+}
+
+@keyframes animazione-dx-bird {
+  0% {
+    left: 65%;
+  }
+  37.5% {
+    left: 20%;
+  }
+  87.5% {
+    left: 80%;
+  }
+  100% {
+    left: 65%;
+  }
+}
 
 .rotate {
   transform: translate(-50%, -50%) rotateY(0);
@@ -311,6 +453,36 @@ h1 {
 }
 .bersaglio-colpito-9 {
   background-image: url(../img/gunman3x.png);
+  transition: 1s;
+  z-index: -2;
+}
+.bersaglio-colpito-10 {
+  background-image: url(../img/cat-balloonx.png);
+  transition: 1s;
+  z-index: -2;
+}
+.bersaglio-colpito-11 {
+  background-image: url(../img/cute-birdx.png);
+  transition: 1s;
+  z-index: -2;
+}
+.bersaglio-colpito-12 {
+  background-image: url(../img/catx.png);
+  transition: 1s;
+  z-index: -2;
+}
+.bersaglio-colpito-13 {
+  background-image: url(../img/cute-balloonx.png);
+  transition: 1s;
+  z-index: -2;
+}
+.bersaglio-colpito-14 {
+  background-image: url(../img/cute-bird2x.png);
+  transition: 1s;
+  z-index: -2;
+}
+.bersaglio-colpito-15 {
+  background-image: url(../img/foxx.png);
   transition: 1s;
   z-index: -2;
 }
