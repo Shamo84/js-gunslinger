@@ -187,7 +187,7 @@ h1 {
   position: fixed;
   top: 0;
   width: 100%;
-  height: calc(100vw * 9 / 16 * 0.19);
+  height: calc(100vw * 9 / 16 * 0.17);
 }
 #sipariosx {
   position: fixed;
@@ -215,7 +215,7 @@ h1 {
 
 @keyframes sipario-top {
   0% {
-    height: calc(100vw * 9 / 16 * 0.19);
+    height: calc(100vw * 9 / 16 * 0.17);
   }
   100% {
     height: calc(100vw * 9 / 16 * 0.14);
@@ -265,7 +265,7 @@ h1 {
     height: calc(100vw * 9 / 16 * 0.14);
   }
   100% {
-    height: calc(100vw * 9 / 16 * 0.19);
+    height: calc(100vw * 9 / 16 * 0.17);
   }
 }
 .sipario-dx-chiusura {
