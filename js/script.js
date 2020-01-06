@@ -312,7 +312,6 @@ function() {
     if (score > topscore) {
       topscore = score;
       document.getElementById('resoconto-testo').innerHTML = "Bravo, hai superato il tuo punteggio massimo!";
-      document.getElementById('resoconto').classList.remove('sparizione', 'hidden');
       document.getElementById('ok2').classList.add('display-none');
       document.getElementById('topscore').innerHTML = "Top Score: " + topscore;
       document.getElementById('topscore').classList.add("score-update");
@@ -327,12 +326,10 @@ function() {
         document.getElementById('resoconto-testo').classList.remove("sparizione");
       }, 3000);
     } else {
-      setTimeout(function(){
-        console.log(i);
-        document.getElementById('ok2').classList.remove('hidden');
         document.getElementById('resoconto-testo').innerHTML = "Hai totalizzato " + score + " punti, sparando " + colpisparati + " colpi, di cui " + colpiasegno + " sono andati a segno e hai ucciso " + babykiller + " animali pucciosi!";
-      }, 104000);
-    }
+        document.getElementById('resoconto-testo').classList.remove("sparizione");
+      }
+    document.getElementById('resoconto').classList.remove('sparizione', 'hidden');
     document.getElementById('difficolta').classList.add('transparent');
     document.getElementById('overlay').classList.remove('hidden');
   }, 104000);
@@ -752,5 +749,5 @@ function() {
     document.getElementById('mirino-insanguinato').className = "mirino-insanguinato";
     document.getElementById('mirino-esplosivo').className = "mirino-esplosivo";
     document.getElementById('mirino-sad').className = "mirino-sad";
-  }, 1000);
+  }, 500);
 });
